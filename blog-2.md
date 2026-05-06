@@ -6,7 +6,7 @@
 
 Object Oriented Programming (OOP) হলো এমন একটি programming style, যা বড় software project গুলোকে organized, structured এবং manageable রাখতে সাহায্য করে।
 
-যখন project বড় হয়, তখন code জটিল হয়ে যায়। এই complexity কমানোর জন্য OOP চারটি গুরুত্বপূর্ণ concept দেয়:
+দেখা যায়, যখন আমাদের project বড় হতে থাকে, তখন code ধীরে ধীরে জটিল হয়ে যায়। এই complexity কমানোর জন্য OOP আমাদের চারটি গুরুত্বপূর্ণ concept দেয়:
 
 * Inheritance
 * Polymorphism
@@ -17,7 +17,7 @@ Object Oriented Programming (OOP) হলো এমন একটি programming s
 
 ### 1. Inheritance (উত্তরাধিকার)
 
-Inheritance মানে হলো একটি class অন্য class এর property এবং method ব্যবহার করতে পারে।
+Inheritance মানে হলো একটি class অন্য একটি class এর property এবং method ব্যবহার করতে পারে। অর্থাৎ, এক class আরেক class এর উপর ভিত্তি করে তৈরি হতে পারে।
 
 উদাহরণস্বরূপ:
 
@@ -42,13 +42,19 @@ class Student extends Person {
 }
 ```
 
-এখানে `Student` class, `Person` থেকে `name` এবং `age` পেয়েছে।
+এখানে `Student` class, `Person` class কে extend করেছে। তাই `Student` automatically `name` এবং `age` property পেয়ে যাচ্ছে।
+
+এছাড়া `super()` ব্যবহার করে আমরা parent class এর constructor call করছি। এর ফলে:
+
+* একই code বারবার লিখতে হয় না
+* code reuse করা যায়
+* structure clean থাকে
 
 ---
 
 ### 2. Polymorphism (একই জিনিস, ভিন্ন আচরণ)
 
-Polymorphism মানে একই method different class এ different behavior দেখাতে পারে।
+Polymorphism মানে হলো একই method ভিন্ন class এ ভিন্ন আচরণ দেখাতে পারে। অর্থাৎ, একই নামের method থাকলেও, সেটি পরিস্থিতি বা class অনুযায়ী ভিন্নভাবে কাজ করতে পারে।
 
 উদাহরণস্বরূপ:
 
@@ -72,7 +78,12 @@ class Cat extends Animal {
 }
 ```
 
-এখানে `sound()` method different output দিচ্ছে।
+এখানে `Animal` class-এ একটি `sound()` method আছে। কিন্তু `Dog` এবং `Cat` class সেই একই method override করে ভিন্ন output দিচ্ছে। অর্থাৎ:
+
+* `Dog` → "Bark"
+* `Cat` → "Meow"
+
+এটাই Polymorphism — একই method, কিন্তু ভিন্ন ভিন্ন behavior। এর ফলে কোড নমনীয় হয় এবং ভবিষ্যতে নতুন class যোগ করা হলেও সহজে নতুন আচরণ যোগ করা যায়, বিদ্যমান কোড পরিবর্তন করেই।
 
 ---
 
@@ -105,7 +116,7 @@ class Circle extends Shape {
 
 ---
 
-### 4. Encapsulation (data protection)
+### 4. Encapsulation (ডেটা সুরক্ষা)
 
 Encapsulation মানে হলো data কে secure রাখা এবং বাইরে থেকে direct access বন্ধ করা। অর্থাৎ Encapsulation ব্যবহার করে আমরা data private রাখতে পারি।
 
