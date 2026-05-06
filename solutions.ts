@@ -30,3 +30,21 @@ function checkType(input: StringOrNumber): string {
 const getProperty = <O, K extends keyof O>(obj: O, key: K) => {
     return obj[key];
 };
+
+
+// Problem 5 solution: Intersection Types for Book and Read Status
+
+interface Book {
+    title: string;
+    author: string;
+    publishedYear: number;
+}
+
+type BookWithReadStatus = Book & { isRead: boolean };
+
+function toggleReadStatus(book: Book, isRead: boolean = true): BookWithReadStatus {
+    return {
+        ...book,
+        isRead
+    };
+}
