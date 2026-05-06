@@ -10,3 +10,16 @@ function filterEvenNumbers(numbers: number[]): number[] {
 function reverseString(str: string): string {
     return str.split("").reverse().join("");
 }
+
+
+// Problem 3 solution: Type Guard for String or Number
+
+type StringOrNumber = string | number;
+
+function checkType(input: StringOrNumber): string {
+    if (typeof input === "string") {
+        return "String";
+    } else {
+        return "Number";
+    }
+}
