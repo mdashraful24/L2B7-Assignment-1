@@ -1,18 +1,18 @@
-// Problem 1 solution: Filter Even Numbers
+// Solution to Problem 1: Filter Even Numbers
 
 function filterEvenNumbers(numbers: number[]): number[] {
     return numbers.filter(num => num % 2 === 0);
 }
 
 
-// Problem 2 solution: Reverse a String
+// Solution to Problem 2: Reverse a String
 
 function reverseString(str: string): string {
     return str.split("").reverse().join("");
 }
 
 
-// Problem 3 solution: Type Guard for String or Number
+// Solution to Problem 3: Type Guard for String or Number
 
 type StringOrNumber = string | number;
 
@@ -25,14 +25,14 @@ function checkType(input: StringOrNumber): string {
 }
 
 
-// Problem 4 solution: Generic Function to Get Property Value
+// Solution to Problem 4: Generic Function to Get Property Value
 
 const getProperty = <O, K extends keyof O>(obj: O, key: K) => {
     return obj[key];
 };
 
 
-// Problem 5 solution: Intersection Types for Book and Read Status
+// Solution to Problem 5: Intersection Types for Book and Read Status
 
 interface Book {
     title: string;
@@ -50,7 +50,7 @@ function toggleReadStatus(book: Book, isRead: boolean = true): BookWithReadStatu
 }
 
 
-// Problem 6 solution: Class Inheritance for Person and Student
+// Solution to Problem 6: Class Inheritance for Person and Student
 
 class Person {
     name: string;
@@ -76,7 +76,7 @@ class Student extends Person {
 }
 
 
-// Problem 7 solution: Intersection of Two Arrays
+// Solution to Problem 7: Intersection of Two Arrays
 
 function getIntersection(arr1: number[], arr2: number[]): number[] {
     const result = new Set(arr2);
