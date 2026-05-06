@@ -23,3 +23,10 @@ function checkType(input: StringOrNumber): string {
         return "Number";
     }
 }
+
+
+// Problem 4 solution: Generic Function to Get Property Value
+
+const getProperty = <O, K extends keyof O>(obj: O, key: K) => {
+    return obj[key];
+};
