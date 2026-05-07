@@ -2,7 +2,7 @@
 
 ## How do the four pillars of OOP—Inheritance, Polymorphism, Abstraction, and Encapsulation—help manage logic and reduce complexity in large-scale TypeScript projects?
 
-### Introduction
+### ভূমিকা
 
 Object Oriented Programming (OOP) হলো এমন একটি programming style, যা বড় software project গুলোকে organized, structured এবং manageable রাখতে সাহায্য করে।
 
@@ -140,7 +140,7 @@ class BankAccount {
 
 ---
 
-### Why OOP is important in real projects?
+### বাস্তব প্রকল্পে OOP কেন গুরুত্বপূর্ণ?
 
 OOP (Object Oriented Programming) বড় এবং complex project গুলো manage করার জন্য খুবই গুরুত্বপূর্ণ। যখন project ছোট থাকে, তখন simple code দিয়েই কাজ চলে। কিন্তু project বড় হলে code অনেক complex হয়ে যায়। তখন OOP structure ব্যবহারে কাজ সহজ হয়।
 
@@ -159,7 +159,7 @@ Oএই ক্ষেত্রে আমরা OOP ব্যবহার কর�
 
 ---
 
-### Conclusion
+### উপসংহার
 
 OOP এর চারটি pillar একসাথে কাজ করে complex system কে সহজ এবং manageable করে তোলে। যার ফলে বড়-scale project গুলোকে সহজভাবে manage করা যায় এবং professional, scalable code লেখা সম্ভব হয়।
 
