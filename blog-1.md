@@ -2,7 +2,7 @@
 
 ## How do `Pick` and `Omit` utility types prevent code duplication while creating specialized "slices" of a master interface? Discuss how this keeps your code DRY (Don't Repeat Yourself).
 
-### Introduction
+### ভূমিকা
 
 TypeScript-এ আমরা যখন বড় বড় object বা data structure নিয়ে কাজ করি, তখন প্রায়ই একই ধরনের properties বারবার ব্যবহার করতে হয়। এতে code অনেক বড় হয়ে যায় এবং maintain করাও অনেক কঠিন হয়ে পড়ে।
 
@@ -10,7 +10,7 @@ TypeScript-এ আমরা যখন বড় বড় object বা data structure
 
 ---
 
-### What is `Pick`?
+### `Pick` বলতে কী বোঝায়?
 
 `Pick` হলো TypeScript-এর একটি utility type, যেটা ব্যবহার করে আমরা কোনো বড় object বা interface থেকে শুধু কিছু নির্দিষ্ট property বেছে নিতে পারি।
 
@@ -40,7 +40,7 @@ type UserPreview = Pick<User, "name" | "email">;
 
 ---
 
-### What is `Omit`?
+### `Omit` বলতে কী বোঝায়?
 
 `Omit` হলো TypeScript-এর একটি utility type, যেটা ব্যবহার করে আমরা কোনো object বা interface থেকে কিছু নির্দিষ্ট property বাদ দিতে পারি।
 
@@ -57,7 +57,7 @@ type UserWithoutId = Omit<User, "id">;
 
 ---
 
-### Why is this useful?
+### এটি কেন দরকারি?
 
 বাস্তব project এ আমরা অনেক সময় একই interface থেকে বিভিন্ন জায়গায় different version বানাই। যেমন:
 
@@ -73,7 +73,7 @@ type UserWithoutId = Omit<User, "id">;
 
 ---
 
-### How it follows DRY principle
+### এটি কীভাবে DRY নীতি অনুসরণ করে?
 
 DRY মানে হলো “Don’t Repeat Yourself” — অর্থাৎ একই জিনিস বারবার না লিখে যতটা সম্ভব reuse করা।
 
@@ -86,7 +86,7 @@ DRY মানে হলো “Don’t Repeat Yourself” — অর্থাৎ 
 
 ---
 
-### Conclusion
+### উপসংহার
 
 `Pick` এবং `Omit` ছোট মনে হলেও এগুলো বড় project এ খুব গুরুত্বপূর্ণ ভূমিকা রাখে। এগুলো ব্যবহার করলে:
 
