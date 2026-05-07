@@ -5,7 +5,7 @@ function filterEvenNumbers(numbers: number[]): number[] {
 
 
 function reverseString(inputStr: string): string {
-    return inputStr.split("").reverse().join("");
+    return `"${inputStr.split("").reverse().join("")}";`;
 }
 
 
@@ -14,16 +14,16 @@ type StringOrNumber = string | number;
 
 function checkType(inputStr: StringOrNumber): string {
     if (typeof inputStr === "string") {
-        return "String";
+        return `"String";`;
     } else {
-        return "Number";
+        return `"Number";`;
     }
 }
 
 
 
 const getProperty = <O, K extends keyof O>(obj: O, key: K) => {
-    return obj[key];
+    return `"${obj[key]}";`;
 };
 
 
@@ -64,7 +64,7 @@ class Student extends Person {
     }
 
     getDetails(): string {
-        return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+        return `"Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}";`;
     }
 }
 
